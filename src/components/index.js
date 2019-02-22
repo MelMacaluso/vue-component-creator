@@ -1,6 +1,6 @@
 import Vue from "vue"
-import Modal from './Modal.vue'
+import Example from './Example.vue'
 
-Vue.component(Modal.name, Modal)
+Vue.component(Example.name, Example)
 
-export default Modal
+export default Example
