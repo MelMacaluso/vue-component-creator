@@ -1,44 +1,31 @@
-# Vue Modal 🖼
+# Vue component creator
 
-## Intro
+A small boilerplate that automates the creation of components.
 
-Reusable Modal component, supports own custom HTML, text and classes.
+## Requirements
 
-## Installation
+As it is built around `vue-cli-service` and it's `lib` option the Vue CLI is a requirement.
 
-```shell
-npm i @melmacaluso/vue-modal
+```bash
+npm i -g @vue/cli
 ```
 
-## Usage
+## From git clone to fully fledged Vue component NPM package
 
-Simply import it in your desired vue component as follows:
+1.  `git clone git@github.com:MelMacaluso/vue-component-creator.git your-folder`
+2.  `cd your-folder`
+3.  Delete old remote and set yours `git remote remote origin && git remote add origin <your github repo url>`
+4.  Set the upstream so that you can push to your repo `git push -u origin master`
+5.  Install packages `npm i`
+6.  Edit `package.json` with your meta info
+7.  Start the hot reloading server `npm run serve`
+8.  "_Happy_" coding 😎(😭)
+9.  When done `npm run build`
+10. Deploy patch/minor/major to NPM and push to your github repo the version tags `npm run publish-<patch/minor/major>`
+11. Don't forge to also `git push` if you want to update your repo accordingly
 
-```javascript
-import Modal from "@melmacaluso/vue-modal";
-```
+## Features
 
-## Props
-
-| **Prop**       | **Type** | **Comment**                                  |
-| -------------- | -------- | -------------------------------------------- |
-| `btnText`      | String   | Text label for modal button                  |
-| `modalHTML`    | String   | Pass here your html for the modal main modal |
-| `closeBtn`     | Boolean  | Conditionally add a close button             |
-| `closeBtnHTML` | String   | Pass here your html for the close button     |
-
-## Example:
-
-```vue
-<Modal
-  btnText="Press me, senpai 😊"
-  modalHTML="
-               <div>
-    	           <p>This is your fully functional html/css modal</p>
-    		       <p>You can even pass a component, or can you 😏?</p>
-               </div>
-               "
-  :closeBtn="true"
-  closeBtnHTML="<span>X</span>"
-/>
-```
+- [x] Hot reload
+- [x] Easy prototyping with scss bundled in and basic folder structure
+- [x] No messing around with package.json settings or vue.config.js madness
